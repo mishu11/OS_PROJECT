@@ -16,13 +16,13 @@ void faculty_Queue(int no_of_process) {
         printf("Enter the details of Process[%d]", count+1);
         puts("");
         printf("Process Name : ");
-        scanf("%s", faculty_Process[count].process_name);
+        scanf("%s ", faculty_Process[count].process_name);
  
         printf("Arrival Time : ");
         scanf("%d", &faculty_Process[count].arrival_time);
  
         printf("Burst Time : ");
-        scanf("%d", &faculty_Process[count].burst_time);
+        scanf("%d ", &faculty_Process[count].burst_time);
         puts("");
     }
     printf("Now, enter the quantum time for FACULTY queue : ");
