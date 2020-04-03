@@ -29,8 +29,6 @@ void faculty_Queue(int no_of_process) {
     scanf("%d", &quantum_time);
  
  
-    // sorting the processes by their ARRIVAL time.
-    // if the ARRIVAL time is same then scheduling is based on FCFS.
     for(count = 0; count < no_of_process; count++) {
         for(int x = count +1; x < count; x++){
             if(faculty_Process[count].arrival_time > faculty_Process[x].arrival_time) {
@@ -41,7 +39,6 @@ void faculty_Queue(int no_of_process) {
         }
     }
  
-    // initialy all the burst time is remaining and completion of process is zero.
     for(count = 0; count < no_of_process; count++) {
         faculty_Process[count].remaining = faculty_Process[count].burst_time;
         faculty_Process[count].completion_time = 0;
@@ -103,7 +100,7 @@ void faculty_Queue(int no_of_process) {
  
  
     puts("\n\t\t\t********************************************");
-    puts("\t\t\t*****   ROUND ROBIN ALGORITHM OUTPUT   *****");
+    puts("\t\t\t   ROUND ROBIN ALGORITHM OUTPUT   ");
     puts("\t\t\t********************************************\n");
     printf("\n|\tProcess Name\t  |\tArrival Time\t  |\tBurst Time\t |\tCompletion Time  \t|\n");
  
@@ -137,7 +134,6 @@ void student_Queue(int no_of_process) {
     scanf("%d", &quantum_time);
  
  
-    // sorting the processes by their ARRIVAL time.
     // if the ARRIVAL time is same then scheduling is based on FCFS.
     for(count = 0; count < no_of_process; count++) {
         for(int x = count +1; x < count; x++){
@@ -149,7 +145,6 @@ void student_Queue(int no_of_process) {
         }
     }
  
-    // initialy all the burst time is remaining and completion of process is zero.
     for(count = 0; count < no_of_process; count++) {
         student_Process[count].remaining = student_Process[count].burst_time;
         student_Process[count].completion_time = 0;
